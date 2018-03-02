@@ -11,7 +11,7 @@ public class TrolleyDetailsPO extends BasePage{
 	@FindBy(css = "div[class='sticky-outer-wrapper'] button[id='site-header-checkout']")
 	private WebElement checkOutButton;
 	
-	@FindBy(css = "button[class='btn-plain-text___fWj0V btn emptyTrolleyButton___29x0_']")
+	@FindBy(css = "button[class*='emptyTrolleyButton']")
 	private WebElement emptyButton;
 	
 	@FindBy(css = "button[class='btn-primary___rLeez btn emptyTrolleyModalButton___3-WMZ']")

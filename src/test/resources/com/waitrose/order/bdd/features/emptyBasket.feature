@@ -1,8 +1,7 @@
-@H
+@smoke-test @regression
 Feature: Waitrose empty Basket
 As a registered User
 I Order Online And Empty Basket
-
 Scenario Outline: Empty Basket
 	Given I navigate to Waitrose Home Page
 	When I clicked on SignIn/Register button
