@@ -2,7 +2,7 @@
 Feature: Waitrose checkOut
 As a registered User
 I Order Online And CheckOut
-
+@H
 Scenario Outline: Check Out
 	Given I navigate to Waitrose Home Page
 	When I clicked on SignIn/Register button

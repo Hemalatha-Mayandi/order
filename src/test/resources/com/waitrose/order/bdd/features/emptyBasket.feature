@@ -2,6 +2,7 @@
 Feature: Waitrose empty Basket
 As a registered User
 I Order Online And Empty Basket
+
 Scenario Outline: Empty Basket
 	Given I navigate to Waitrose Home Page
 	When I clicked on SignIn/Register button
@@ -22,7 +23,7 @@ Scenario Outline: Empty Basket
 	And I click Trolley details button
 	And I click Empty Trolley link
 	And I click Confirm to Empty Trolley
-	Then I should see "0 trolley items"
+	Then I should Basket with "0 trolley items"
 	
 	Examples: 
 		|MailID					|Password		| Landing_Page 	|Product	|Product_searched|Sort_search		|

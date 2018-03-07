@@ -22,10 +22,11 @@ public class EmptyBasket {
 		trolleyDetailsPO.clickConfirmEmptyBasket();
 	}
 	
-	@Then("^I should see Basket with \"([^\"]*)\"$")
-	public void i_should_see_Basket_with(String emptyBasket) {
+	@Then("^I should Basket with \"([^\"]*)\"$")
+	public void i_should_Basket_with(String emptyBasket) {
 		trolleyDetailsPO.assertItemInEmptyBasket(emptyBasket);
-	   
+	   //SignOut
+		trolleyDetailsPO.clickSignOut();
 	}
 
 }

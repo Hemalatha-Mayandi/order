@@ -28,6 +28,9 @@ public class ProductListPO extends BasePage{
 	@FindBy(css = "section[class='details___2RheR'] header[class='prodDetails___2rfK1'] span[class='name___2sgmL']")
 	private String selectProduct;
 	
+/*	@FindBy(css ="section[class='details___2RheR'] header[class='prodDetails___2rfK1'] span[class='name___2sgmL']")
+	public List<WebElement> selectProduct;*/
+	
 	public void enterproductsearch(String productName) {
 		enterText(searchProduct,productName);
 	}
@@ -55,5 +58,7 @@ public class ProductListPO extends BasePage{
 		je.executeScript("scroll(250,400)");
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("section[class='details___2RheR'] header[class='prodDetails___2rfK1'] span[class='name___2sgmL']"))).get(1).click();
 
+		/*selectProduct.get(1).click();*/
+		
 	}
 }

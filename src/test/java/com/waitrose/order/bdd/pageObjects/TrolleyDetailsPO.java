@@ -20,6 +20,9 @@ public class TrolleyDetailsPO extends BasePage{
 	@FindBy(css = "header[class='header___1GXfm horizontalSpacing___1Juch']")
 	private WebElement itemInEmptyBasket;
 	
+	@FindBy(partialLinkText = "Sign out")
+	private WebElement signOut;
+	
 	public void assertbasketTrolleyDetails(String trolleyDetails) {
 		assertTextOnWebElement(trolleyDetailsButton,trolleyDetails);
 	}
@@ -42,5 +45,9 @@ public class TrolleyDetailsPO extends BasePage{
 	
 	public void assertItemInEmptyBasket(String emptyBasket) {
 		assertTextOnWebElement(itemInEmptyBasket,emptyBasket);
+	}
+	
+	public void clickSignOut() {
+		clickOnWebElement(signOut);
 	}
 }

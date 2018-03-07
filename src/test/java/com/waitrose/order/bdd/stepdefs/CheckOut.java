@@ -25,7 +25,7 @@ public class CheckOut {
 	
 	ProductDescPO ProductDescPO = PageFactory.initElements(WebConnector.driver, ProductDescPO.class);
 	
-	TrolleyDetailsPO TrolleyDetailsPO = PageFactory.initElements(WebConnector.driver, TrolleyDetailsPO.class);
+	TrolleyDetailsPO trolleyDetailsPO = PageFactory.initElements(WebConnector.driver, TrolleyDetailsPO.class);
 	
 	BookSlotPO BookSlotPO= PageFactory.initElements(WebConnector.driver, BookSlotPO.class);
 	
@@ -112,17 +112,17 @@ public class CheckOut {
 		
 	@And("^I should view \"([^\"]*)\"$")
 	public void i_should_view(String trolleyDetails) {
-		TrolleyDetailsPO.assertbasketTrolleyDetails(trolleyDetails);	   
+		trolleyDetailsPO.assertbasketTrolleyDetails(trolleyDetails);	   
 	}
 	
 	@And("^I click Trolley details button$")
 	public void i_click_Trolley_details_button() {
-		TrolleyDetailsPO.clickTrolleyDetails();	   
+		trolleyDetailsPO.clickTrolleyDetails();	   
 	}
 	
 	@Then("^I click on Check Out button$")
 	public void i_click_on_Check_Out_button() {
-	    TrolleyDetailsPO.clickCheckOut();
+	    trolleyDetailsPO.clickCheckOut();
 	}
 
 	@Then("^I select Click & Collect$")
@@ -152,6 +152,13 @@ public class CheckOut {
 	public void i_should_see(String slotreservationMessage) {
 	    
 		BookSlotPO.assertSlotReservation(slotreservationMessage);
+		//Empty Basket
+		ProductDescPO.clickBasketIcon();
+		trolleyDetailsPO.clickTrolleyDetails();	 
+		trolleyDetailsPO.clickEmptyButton();
+		trolleyDetailsPO.clickConfirmEmptyBasket();
+		trolleyDetailsPO.clickSignOut();
+		
 	}
 	
 }
